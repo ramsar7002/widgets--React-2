@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 //import Accordion from './Accordion';
 import DropDown from './DropDown';
 import Translate from './Translate';
+import Acccordion from './Accordion';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Search from './Search';
 
 const App = () => {
   const [selected, setSelected] = useState(null);
@@ -55,9 +58,31 @@ const App = () => {
     //     />
     //   ) : null}
     // </div>
-
     <div>
-      <Translate />
+      <BrowserRouter>
+        <div>
+          <Route path="/" exact>
+            <Acccordion items={items} />
+          </Route>
+          <Route
+            path="/search"
+            render={pros => {
+              <Search />;
+            }}
+          />
+          <Route path="/dropdown">
+            <DropDown
+              label={'Choose Color'}
+              options={options}
+              selected={selected}
+              onSelectedChange={setSelected}
+            />
+          </Route>
+          <Route path="/translate">
+            <Translate />
+          </Route>
+        </div>
+      </BrowserRouter>
     </div>
   );
 };

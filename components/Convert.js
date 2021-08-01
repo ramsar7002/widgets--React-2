@@ -28,7 +28,11 @@ const Convert = ({ language, text }) => {
     };
   }, [language, text]);
 
-  return <div>{translated}</div>;
+  return (
+    <div>
+      <h1 className="ui header">{translated}</h1>
+    </div>
+  );
 };
 
 export default Convert;

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 //import Accordion from './Accordion';
 import DropDown from './DropDown';
+import Translate from './Translate';
+
 const App = () => {
   const [selected, setSelected] = useState(null);
   const [showDropdown, setShowDropdown] = useState(true);
@@ -40,18 +42,22 @@ const App = () => {
   ];
 
   return (
+    // <div>
+    //   <br />
+    //   <button onClick={() => setShowDropdown(!showDropdown)}>
+    //     Toggle Dropdown
+    //   </button>
+    //   {showDropdown ? (
+    //     <DropDown
+    //       options={options}
+    //       selected={selected}
+    //       onSelectedChange={setSelected}
+    //     />
+    //   ) : null}
+    // </div>
+
     <div>
-      <br />
-      <button onClick={() => setShowDropdown(!showDropdown)}>
-        Toggle Dropdown
-      </button>
-      {showDropdown ? (
-        <DropDown
-          options={options}
-          selected={selected}
-          onSelectedChange={setSelected}
-        />
-      ) : null}
+      <Translate />
     </div>
   );
 };

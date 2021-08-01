@@ -8,13 +8,13 @@ const Menu = () => {
         Accordion
       </Link>
       <Link className="item" to="/search">
-        Search
+        Searchf
       </Link>
       <Link className="item" to="/dropdown">
         Dropdown
       </Link>
       <Link className="item" to="/translate">
-        Translate
+        Translahghgte
       </Link>
     </div>
   );

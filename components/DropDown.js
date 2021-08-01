@@ -38,7 +38,7 @@ const DropDown = ({ options, selected, onSelectedChange }) => {
       <div className="field">
         <label className="label">Select a Color</label>
         <div
-          className={`ui selection dropdown ${open ? 'visible acticxcxcxcxcxxxxcxcxcxcxcve' : ''}`}
+          className={`ui selection dropdown ${open ? 'visible active' : ''}`}
           onClick={() => setOpen(!open)}
         >
           <i className="dropdown icon"></i>
